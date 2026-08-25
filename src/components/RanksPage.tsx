@@ -38,7 +38,7 @@ const ranksData: { rank: Rank; icon: string; description: string; duties: string
       'Ношение Знака Вердикта',
       'Голос на внутренних выборах',
     ],
-    count: 12,
+    count: 1,
   },
   {
     rank: 'Следователь',
@@ -58,7 +58,7 @@ const ranksData: { rank: Rank; icon: string; description: string; duties: string
       'Официальные полномочия для расследований',
       'Ношение знака Следователя',
     ],
-    count: 20,
+    count: 0,
   },
   {
     rank: 'Разведчик',
@@ -77,7 +77,7 @@ const ranksData: { rank: Rank; icon: string; description: string; duties: string
       'Право отказа от задания без объяснений',
       'Особые условия оплаты',
     ],
-    count: 9,
+    count: 0,
   },
   {
     rank: 'Новобранец',
@@ -96,7 +96,7 @@ const ranksData: { rank: Rank; icon: string; description: string; duties: string
       'Защита организации',
       'Наставник из числа опытных стражей',
     ],
-    count: 5,
+    count: 0,
   },
 ];
 
