@@ -6,7 +6,7 @@ import MembersPage from './components/MembersPage';
 import RanksPage from './components/RanksPage';
 import Footer from './components/Footer';
 
-type Page = 'home' | 'about' | 'members' | 'ranks';
+type Page = 'home' | 'about' | 'members' | 'ranks' | 'sub';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');

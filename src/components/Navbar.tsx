@@ -8,11 +8,13 @@ interface NavbarProps {
 export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // 1. Возвращаем все ссылки в массив
   const links = [
     { id: 'home', label: 'Главная' },
     { id: 'about', label: 'Об организации' },
     { id: 'members', label: 'Участники' },
     { id: 'ranks', label: 'Звания' },
+    { id: 'sub', label: 'Оставить заявку', href: 'https://guardian-request-zeta.vercel.app/' },
   ];
 
   return (
@@ -24,12 +26,12 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
             onClick={() => onNavigate('home')}
             className="flex items-center gap-3 group"
           >
-            <img
-              src="/images/emblem.png"
-              alt="Emblem"
+            <img 
+              src="/images/emblem.png" 
+              alt="Emblem" 
               className="w-9 h-9 object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-200"
             />
-            <div className="flex flex-col leading-tight">
+            <div className="flex flex-col leading-tight text-left">
               <span className="text-amber-400 font-bold text-sm tracking-widest uppercase">Стражи</span>
               <span className="text-amber-200/70 text-xs tracking-wider">Вердикта</span>
             </div>
@@ -40,7 +42,14 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
             {links.map((link) => (
               <button
                 key={link.id}
-                onClick={() => onNavigate(link.id)}
+                onClick={() => {
+                  // Исправленная логика клика
+                  if (link.id === 'sub' && link.href) {
+                    window.open(link.href, '_blank');
+                  } else {
+                    onNavigate(link.id as any);
+                  }
+                }}
                 className={`px-4 py-2 rounded text-sm font-medium tracking-wide transition-all duration-200 ${
                   currentPage === link.id
                     ? 'text-amber-400 bg-amber-500/10 border border-amber-500/30'

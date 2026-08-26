@@ -1,4 +1,4 @@
-export type Rank = 'Верховный Страж' | 'Страж Вердикта' | 'Следователь' | 'Разведчик' | 'Новобранец';
+export type Rank = 'Верховный Страж' | 'Страж Вердикта' | 'Следователь' | 'Разведчик' | 'Новобранец' | '';
 
 export interface Character {
   id: number;
@@ -19,6 +19,7 @@ export interface Character {
 
 export const rankColors: Record<Rank, string> = {
   'Верховный Страж': 'from-yellow-600 to-amber-400',
+  '': 'from-gray-500 to-gray-400',
   'Страж Вердикта': 'from-purple-600 to-violet-400',
   'Следователь': 'from-blue-700 to-cyan-500',
   'Разведчик': 'from-emerald-700 to-green-500',
@@ -28,6 +29,7 @@ export const rankColors: Record<Rank, string> = {
 export const rankBorder: Record<Rank, string> = {
   'Верховный Страж': 'border-amber-500',
   'Страж Вердикта': 'border-violet-500',
+  '': 'from-gray-500 to-gray-400',
   'Следователь': 'border-cyan-500',
   'Разведчик': 'border-emerald-500',
   'Новобранец': 'border-slate-500',
@@ -35,6 +37,7 @@ export const rankBorder: Record<Rank, string> = {
 
 export const rankGlow: Record<Rank, string> = {
   'Верховный Страж': 'shadow-amber-500/30',
+  '': 'from-gray-500 to-gray-400',
   'Страж Вердикта': 'shadow-violet-500/30',
   'Следователь': 'shadow-cyan-500/30',
   'Разведчик': 'shadow-emerald-500/30',
@@ -83,7 +86,7 @@ export const characters: Character[] = [
   {
     id: 3,
     name: 'Пусто',
-    rank: 'нету',
+    rank: '',
     age: 0,
     race: '',
     origin: '',
@@ -103,7 +106,7 @@ export const characters: Character[] = [
   {
     id: 4,
     name: 'Пусто',
-    rank: 'нету',
+    rank: '',
     age: 0,
     race: '',
     origin: '',
@@ -123,7 +126,7 @@ export const characters: Character[] = [
   {
     id: 5,
     name: 'Пусто',
-    rank: 'нету',
+    rank: '',
     age: 0,
     race: '',
     origin: '',
