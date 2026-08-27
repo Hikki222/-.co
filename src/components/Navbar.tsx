@@ -83,7 +83,14 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
           {links.map((link) => (
             <button
               key={link.id}
-              onClick={() => { onNavigate(link.id); setMenuOpen(false); }}
+              onClick={() => {
+                if (link.id === 'sub' && link.href) {
+                  window.open(link.href, '_blank');
+                } else {
+                  onNavigate(link.id as any);
+                }
+                setMenuOpen(false);
+              }}
               className={`block w-full text-left px-4 py-2.5 rounded text-sm font-medium tracking-wide transition-all duration-200 ${
                 currentPage === link.id
                   ? 'text-amber-400 bg-amber-500/10 border border-amber-500/30'
