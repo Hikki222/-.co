@@ -86,7 +86,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-amber-900/20 rounded-lg overflow-hidden border border-amber-900/30">
             {[
               { value: '300+', label: 'Лет истории' },
-              { value: '400000+', label: 'Активных стражей' },
+              { value: '50+', label: 'Активных стражей' },
               { value: '1 200+', label: 'Закрытых дел' },
               { value: '12', label: 'Регионов влияния' },
             ].map((stat, i) => (
